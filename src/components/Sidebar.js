@@ -7,7 +7,7 @@ const Sidebar = () => {
   
   return (s1 &&<div className='p-5 shadow-2xl w-48'>
       <ul>
-        <li><Link to="/">Home</Link></li>
+        <li><Link to="/home">Home</Link></li>
         <li>Shorts</li>
         <li>Videos</li>
         <li>Live</li>
