@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appslice";
 import { useSearchParams } from "react-router-dom";
+import CommentsContainer from "./CommentsContainer";
+import Livechat from "./Livechat";
 
 const Watchpage = () => {
   const [searchparams] = useSearchParams();
@@ -12,8 +14,10 @@ const Watchpage = () => {
     dispatch(closeMenu());
   }, []);
   return (
-    <div>
-      Watchpage
+    <> 
+      <div className="flex flex-col w-full">
+     <div className="px-5 flex w-full">
+     <div className=" w-full">
       <iframe
         width="914"
         height="514"
@@ -25,6 +29,14 @@ const Watchpage = () => {
         allowFullScreen
       ></iframe>
     </div>
+    <div className="w-full">
+      <Livechat/>
+    </div>
+    </div>
+    <CommentsContainer/>
+  </div>
+    </>
+  
   );
 };
 

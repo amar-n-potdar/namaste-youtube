@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Watchpage from './components/Watchpage';
 import { MainContainer } from './components/MainContainer';
 import Home from './components/Home';
+import Suggested from './components/Suggested';
 const appRouter=createBrowserRouter([
   {
     path:"/",
@@ -24,7 +25,11 @@ const appRouter=createBrowserRouter([
       {
         path:"/home",
         element:<Home/>
-      }
+      },
+      {
+        path:"/suggested",
+        element:<Suggested />
+      },
     ]
    }
    
